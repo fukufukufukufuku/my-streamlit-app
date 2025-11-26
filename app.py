@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib as mpl  # 追加
 
-plt.rcParams["font.family"] = "IPAGothic"
+mpl.rcParams["font.family"] = "IPAGothic"
+mpl.rcParams["axes.unicode_minus"] = False
 
 st.title("2変数を選んで散布図を表示するアプリ")
 
@@ -33,6 +35,7 @@ if uploaded_file:
         ax.set_title(f"{x_var} vs {y_var} の散布図")
 
         st.pyplot(fig)
+
 
 
 
