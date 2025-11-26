@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import japanize_matplotlib
 
 st.title("2変数を選んで散布図を表示するアプリ")
 
@@ -32,4 +31,5 @@ if uploaded_file:
         ax.set_title(f"{x_var} vs {y_var} の散布図")
 
         st.pyplot(fig)
+
 
